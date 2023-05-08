@@ -53,7 +53,8 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test void shouldFindLastWithParam() {
+    @Test
+    void shouldFindLastWithParam() {
         MovieManager manager = new MovieManager(4);
         manager.add(movie1);
         manager.add(movie2);
@@ -69,7 +70,8 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test void shouldFindLast5IfNegativeParam() {
+    @Test
+    void shouldFindLast5IfNegativeParam() {
         MovieManager manager = new MovieManager(-4);
         manager.add(movie1);
         manager.add(movie2);
@@ -85,7 +87,8 @@ public class MovieManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test void shouldFindLastIfNotEnoughMovies() {
+    @Test
+    void shouldFindLastIfNotEnoughMovies() {
         MovieManager manager = new MovieManager();
         manager.add(movie1);
         manager.add(movie2);
