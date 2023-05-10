@@ -28,11 +28,14 @@ public class MovieManager {
     }
 
     public Movie[] findLast() {
+        int lengthOfList;
         if (countOfLastMovies > movies.length) {
-            countOfLastMovies = movies.length;
+            lengthOfList = movies.length;
+        } else {
+            lengthOfList = countOfLastMovies;
         }
-        Movie[] result = new Movie[countOfLastMovies];
-        for (int i = 0; i < countOfLastMovies; i++) {
+        Movie[] result = new Movie[lengthOfList];
+        for (int i = 0; i < lengthOfList; i++) {
             result[i] = movies[movies.length - 1 - i];
         }
         return result;
